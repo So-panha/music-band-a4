@@ -1,0 +1,109 @@
+@import "../mixins/breakpoint";
+@import "variables";
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.1fr;
+    background-color: $main-color;
+    height: 12vh;
+    color: $color-text;
+
+    .navbar-left {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            border-radius: 50px;
+            margin-left: 9%;
+        }
+
+        @include responsive('mobile') {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .navbar-left p {
+        font-family: 'Caveat Brush';
+        margin-left: 10px;
+    }
+
+    @include responsive ('tablet') {
+        .navbar-left p {
+            position: relative;
+            right: -4%;
+        }
+    }
+
+    @include responsive('mobile') {
+        .navbar-left p {
+            position: relative;
+            right: -7%;
+            font-size: smaller;
+            font-weight: 100;
+        }
+    }
+
+    .navbar-right {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        position: relative;
+        right: -12%;
+
+        a {
+            color: $color-text;
+            text-decoration: none;
+        }
+
+        @include responsive('mobile') {
+            a {
+                display: none;
+            }
+        }
+    }
+
+    .navbar-left {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        .navbar-right>a {
+            margin: 0 1rem;
+            overflow: hidden;
+        }
+
+    }
+
+    .fa-bars {
+        margin-top: 15px;
+        font-size: 2rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    @include responsive('mobile') {
+        .fa-bars {
+            display: block;
+            position: relative;
+            right: 20px;
+
+        }
+    }
+}
+
+@include responsive ('tablet') {
+    nav {
+        height: 9vh;
+    }
+}
+
+@include responsive ('mobile') {
+    nav {
+        height: 6vh;
+    }
+}

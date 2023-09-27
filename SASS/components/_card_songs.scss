@@ -1,0 +1,23 @@
+@import '../mixins/groups_mixin';
+.song {
+    @include border-redius;
+    background-color: $color-text;
+    height: 50px;
+    margin: $pixel;
+    padding: $pixel;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .photo {
+        border-radius: 5px;
+        width: 55px;
+        height: 55px;
+        margin-top: 5px;
+    }
+    a {
+        font-weight: bold;
+        color: $dark-black ;
+        text-decoration: none;
+    }
+    
+}

@@ -1,8 +1,3 @@
-body {
-  font-family: sans-serif;
-  background-color: white;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +7,11 @@ body {
 
 nav {
   height: 80px;
+  width: 100%;
   background-color: rgb(51, 77, 77);
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .nav-left {
@@ -123,7 +122,7 @@ label #cancel {
   ul {
     position: fixed;
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     background-color: rgb(51, 77, 77);
     top: 80px;
     left: 100%;
@@ -151,94 +150,135 @@ label #cancel {
     display: block;
   }
 }
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.song {
+  border-radius: 10px;
+  background-color: white;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.song .photo {
+  border-radius: 5px;
+  width: 55px;
+  height: 55px;
+  margin-top: 5px;
+}
+.song a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
 .mytap {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1105px;
-  margin: 20px auto;
+  max-width: 1205px;
+  margin: 110px auto;
 }
-@media screen and (max-width: ) {
-  .mytap {
-    width: 100%;
-  }
-}
-
-input[type=radio] {
+.mytap input[type=radio] {
   display: none;
 }
-
-.taps {
-  width: 184px;
+.mytap .taps {
+  width: 150.5px;
   padding: 25px;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   text-align: center;
   font-weight: bold;
   color: white;
 }
-
-@media screen and (max-width: ) {
-  .taps {
-    width: 10px;
-    padding: 5px;
-    background-color: aqua;
+@media screen and (max-width: 830px) {
+  .mytap .taps {
+    width: 10.15%;
   }
 }
-.tab {
+@media screen and (max-width: 600px) {
+  .mytap .taps {
+    width: 15%;
+    padding: 15px 3px;
+  }
+}
+.mytap .tab {
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   padding: 20px;
-  background-color: rgba(4, 4, 4, 0.543);
+  background-color: rgba(0, 0, 0, 0.635);
   border-radius: 0px 0px 10px 10px;
   order: 1;
   display: none;
 }
-.tab .album {
+.mytap .tab .album {
+  border-radius: 10px;
   width: 100%;
   height: 95%;
-  border-radius: 10px;
   display: flex;
   margin: auto;
   gap: 20px;
 }
-.tab .album .fa-spin {
+.mytap .tab .album .fa-spin {
   width: 470px;
   height: 100%;
   border-radius: 400px;
   border: 3px solid white;
   animation-duration: 15s;
 }
-.tab .album .lists {
+@media screen and (max-width: 830px) {
+  .mytap .tab .album .fa-spin {
+    width: 400px;
+    height: 60%;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mytap .tab .album .fa-spin {
+    width: 70%;
+    height: 70%;
+  }
+}
+.mytap .tab .album .lists {
+  border-radius: 10px;
   background-color: rgba(8, 5, 5, 0.375);
   border: 1px solid rgba(255, 255, 255, 0.534);
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   overflow: scroll;
 }
-.tab .album .lists .scroll {
+.mytap .tab .album .lists .scroll {
   height: 40%;
 }
-.tab .album .lists .scroll .song {
-  background-color: white;
-  height: 70px;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+@media screen and (max-width: 600px) {
+  .mytap .tab .album .lists .scroll {
+    height: 100%;
+  }
 }
-.tab .album .lists .scroll .song .photo {
-  border-radius: 5px;
-  width: 55px;
-  height: 55px;
+@media screen and (max-width: 600px) {
+  .mytap .tab .album {
+    flex-direction: column;
+  }
 }
-.tab .album .lists .scroll .song a {
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
+@media screen and (max-width: 600px) {
+  .mytap .tab {
+    height: 600px;
+  }
 }
 
+@media screen and (max-width: 830px) {
+  .mytap {
+    margin: 90px auto;
+  }
+}
 input[type=radio]:checked + label + .tab {
   display: block;
 }

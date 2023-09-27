@@ -158,4 +158,205 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}/*# sourceMappingURL=contact_us.css.map */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+main form {
+  display: flex;
+  justify-content: center;
+  color: white;
+  height: 79.5vh;
+  width: 900px;
+  margin: 100px auto;
+}
+main form .contact_us_right,
+main form .contact_us_left {
+  width: 50%;
+}
+main form .contact_us_right {
+  border-radius: 0 20px 20px 0;
+  background-image: linear-gradient(to bottom, #255b5b, #1f5050, #184545, #123a3a, #0c3030);
+}
+main form .contact_us_right .contact_us_right_text {
+  background: #334D4D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20.9vh;
+  border-radius: 0 0 20px 0;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-top: -4px;
+}
+main form .contact_us_right .contact_us_right_text h3 {
+  color: white;
+  font-family: "Irish Grover";
+  transform: scale(calc(1 + var(--hover) * 0.1));
+  transition: transform 0.4s;
+}
+main form .contact_us_right .contact_us_right_text h3:hover {
+  --hover: 0.5;
+}
+main form .contact_us_right img {
+  margin-top: 5px;
+  margin-left: 15px;
+  width: 92%;
+  transform: scale(calc(1 + var(--hover) * 0.1));
+  transition: transform 2s;
+}
+main form .contact_us_right img:hover {
+  --hover: 0.1;
+}
+@media screen and (max-width: 830px) {
+  main form .contact_us_right {
+    display: none;
+  }
+}
+main form .contact_us_left {
+  background: rgba(0, 0, 0, 0.493);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px 0 0 20px;
+}
+main form .contact_us_left .input-box {
+  position: relative;
+  width: 320px;
+  margin: 10px 0;
+  border-bottom: 2px solid #ffffff;
+}
+main form .contact_us_left .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+main form .contact_us_left .input-box input {
+  background: transparent;
+  color: white;
+  width: 96%;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 5px 8px 0 5px;
+}
+@media screen and (max-width: 600px) {
+  main form .contact_us_left .input-box input {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  main form .contact_us_left .input-box {
+    width: 210px;
+  }
+}
+main form .contact_us_left .input-box input:focus ~ label,
+main form .contact_us_left .input-box input:valid ~ label {
+  top: -2px;
+}
+main form .contact_us_left .input-box-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+main form .contact_us_left .input-box-text textarea {
+  transform: translateY(15%);
+  border-radius: 5px;
+  border: 2px solid teal;
+  padding: 7.5px;
+  font-size: 0.9em;
+  width: 310px;
+  height: 10vh;
+  transition: 0.5s;
+  outline: none;
+}
+@media screen and (max-width: 600px) {
+  main form .contact_us_left .input-box-text textarea {
+    width: 210px;
+    height: 7vh;
+  }
+}
+main form .contact_us_left .input-box-text label {
+  margin-left: 8px;
+}
+main form .contact_us_left .contact-us-send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: teal;
+  border-radius: 10px;
+  margin-right: -46%;
+  margin-top: 30px;
+  width: 120px;
+  height: 7vh;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  main form .contact_us_left .contact-us-send h4 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 830px) {
+  main form .contact_us_left .contact-us-send {
+    margin-top: 40px;
+    margin-left: -46%;
+    height: 6.5vh;
+    width: 54%;
+  }
+}
+@media screen and (max-width: 600px) {
+  main form .contact_us_left .contact-us-send {
+    margin-top: 30px;
+    width: 225px;
+    height: 4vh;
+  }
+}
+main form .contact_us_left .contact-us-send:hover {
+  background: #000;
+  color: white;
+  transition: 0.5s;
+}
+main form .contact_us_left .header {
+  margin-bottom: 20px;
+}
+main form .contact_us_left .header h1 {
+  background: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 25px;
+  height: 10vh;
+  width: 250px;
+  margin-top: 0px;
+}
+@media screen and (max-width: 600px) {
+  main form .contact_us_left .header h1 {
+    font-size: 15px;
+    height: 7vh;
+    width: 180px;
+  }
+}
+@media screen and (max-width: 830px) {
+  main form .contact_us_left {
+    border-radius: 20px;
+    margin-top: 23px;
+    width: 80%;
+    height: 73vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  main form .contact_us_left {
+    width: 80%;
+    height: 65vh;
+  }
+}

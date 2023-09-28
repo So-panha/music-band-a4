@@ -395,7 +395,8 @@ main .tickets .ticket3 {
   height: 520px;
   border-radius: 10px;
   margin: 50px 30px 0 30px;
-  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
 }
 main .tickets .ticket1 img,
 main .tickets .ticket2 img,
@@ -560,4 +561,4 @@ main .tickets .ticket3 button:hover {
     display: flex;
     flex-direction: column;
   }
-}
+}/*# sourceMappingURL=home.css.map */

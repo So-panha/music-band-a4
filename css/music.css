@@ -471,4 +471,4 @@ input[type=radio]:checked + label + .tab {
 input[type=radio]:checked + label {
   background-color: rgb(14, 191, 64);
   transition: 0.5s;
-}
+}/*# sourceMappingURL=music.css.map */

@@ -6,8 +6,6 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
   background-image: url(../../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -453,4 +451,4 @@ main form .contact_us_left .header h1 {
     width: 80%;
     height: 65vh;
   }
-}/*# sourceMappingURL=contact_us.css.map */
+}

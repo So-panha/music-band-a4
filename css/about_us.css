@@ -6,8 +6,6 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
   background-image: url(../../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -549,4 +547,4 @@ footer .footer-right p {
     align-items: center;
     text-align: center;
   }
-}/*# sourceMappingURL=about_us.css.map */
+}

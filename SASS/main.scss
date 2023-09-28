@@ -4,6 +4,7 @@
     list-style: none;
     text-decoration: none;
 }
-@import "components/navbar";
-@import "./mixins/breakpoint";
 @import "./components/background";
+@import "./mixins/breakpoint";
+@import "components/navbar";
+@import "./components/footer";

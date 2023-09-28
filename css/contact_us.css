@@ -18,7 +18,7 @@ nav {
   display: flex;
 }
 
-p {
+.name-band {
   font-size: 25px;
   color: white;
   position: absolute;
@@ -105,7 +105,7 @@ label #cancel {
     left: 6%;
     top: 15px;
   }
-  p {
+  .name-band {
     margin-left: 40px;
   }
   nav ul li a {
@@ -129,7 +129,7 @@ label #cancel {
     text-align: center;
     transition: all 0.5s;
   }
-  p {
+  .name-band {
     margin-left: 50px;
   }
   nav ul li {
@@ -359,4 +359,4 @@ main form .contact_us_left .header h1 {
     width: 80%;
     height: 65vh;
   }
-}
+}/*# sourceMappingURL=contact_us.css.map */

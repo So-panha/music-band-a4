@@ -13,7 +13,7 @@ nav {
 
 }
 
-p {
+.name-band {
     font-size: 25px;
     color: white;
     position: absolute;
@@ -105,7 +105,7 @@ label #cancel {
         top: 15px;
     }
 
-    p {
+    .name-band {
         margin-left: 40px;
     }
 
@@ -134,7 +134,7 @@ label #cancel {
         transition: all .5s;
     }
 
-    p {
+    .name-band {
         margin-left: 50px;
     }
 

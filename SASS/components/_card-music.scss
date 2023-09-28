@@ -1,17 +1,17 @@
 
 @import "../mixins/groups_mixin";
 .main-card {
-    @include centered-center;
     margin: 0px auto;
     padding : 30px;  
     width : 1100px;
     height: 300px;
     position : relative;
+    display : flex;
+    align-items : center;
     justify-content : center;
     flex-wrap : warp;
     .card {
         @include shadow;
-        @include centered-center;
         position: relative;
         max-width : 255px;
         height : 245px;  
@@ -19,6 +19,8 @@
         border-radius : 15px;
         margin : 30px 10px;
         padding : 20px 15px;
+        display : flex;
+        flex-direction : column;
         transition : 0.3s ease-in-out;
     .content {
         position : relative;

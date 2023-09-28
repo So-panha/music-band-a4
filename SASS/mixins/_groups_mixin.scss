@@ -1,5 +1,15 @@
 @import "../components/variables";
+@import "./breakpoint";
 
 @mixin border-redius{
     border-radius: 10px;
+}
+
+@mixin shadow{
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+}
+
+@mixin centered-center{
+    display : flex;
+    align-items : center;
 }

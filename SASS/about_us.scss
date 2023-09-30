@@ -5,7 +5,7 @@
     align-items: center;
     color: white;
     header {
-        background-color: rgba(0, 0, 0, 0.761);
+        background-color: $light-dark ;
         width: 85%;
         display: flex;
         flex-direction: column;
@@ -22,8 +22,8 @@
             letter-spacing: 5px;
         }
 
-        p {
-            font-size: 25px;
+        p1 {
+            font-size:25px;
             width: 70%;
             line-height: 1.5;
         }
@@ -34,10 +34,10 @@
                 letter-spacing: 1px;
             }
 
-            p {
-                font-size: 18px;
+            p1 {
+                font-size:20px;
                 width: 80%;
-                line-height: 1.5;
+                line-height: 1.3;
             }
 
         }
@@ -48,7 +48,7 @@
                 letter-spacing: 0.5px;
             }
 
-            p {
+            p1 {
                 font-size: 14px;
                 width: 85%;
                 line-height: 1.2;
@@ -59,23 +59,18 @@
 
     @include responsive ('tablet') {
         header {
-            display: flex;
             gap: 10px;
-            margin-top: 20%;
+            margin-top:100px;
         }
 
     }
 
     @include responsive ('mobile') {
         header {
-            background-color: rgba(0, 0, 0, 0.761);
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             gap: 5px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin-top: 30%;
+            margin-top:90px;
             padding: 10px;
             border-radius: 0px;
         }
@@ -99,16 +94,12 @@
         @include responsive ('tablet') {
             h1 {
                 font-size: 40px;
-                letter-spacing: 1px;
-                margin-top: 15%;
                 margin-bottom:0%;
             }
         }
 
         @include responsive ('mobile') {
             h1 {
-                display: flex;
-                align-self: center;
                 font-size: 30px;
                 margin-top: 20%;
                 margin-bottom:25%;
@@ -122,7 +113,7 @@
             padding: 13% 0% 0% 0%;
 
             .card-bio {
-                background-color: rgba(0, 0, 0, 0.761);
+                background-color: $color-cards;
                 width: 20%;
                 display: flex;
                 flex-direction: column;
@@ -143,7 +134,7 @@
                     font-size: 30px;
                 }
 
-                p {
+                p1 {
                     font-size: 20px;
                     margin-top: 5px;
                     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -152,20 +143,20 @@
 
                 @include responsive ('tablet') {
                     img {
-                        width: 140px;
-                        height: 140px;
+                        width: 160px;
+                        height: 160px;
                         border-radius: 50%;
                         border: 4px solid white;
                         margin-top: -100px;
                     }
 
                     h3 {
-                        font-size: 18px;
+                        font-size:20px;
                     }
 
-                    p {
-                        font-size: 13px;
-                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    p1 {
+                        font-size: 15px;
+                        line-height: 17px;
                     }
                 }
 
@@ -173,10 +164,7 @@
                     img {
                         width: 140px;
                         height: 140px;
-                        display: flex;
-                        align-self: center;
                         border-radius: 50%;
-                        border: 4px solid white;
                         margin-top: -80px;
                     }
 
@@ -185,12 +173,11 @@
                         margin-top: 5%;
                     }
 
-                    p {
+                    p1 {
                         width: 80%;
-                        display: flex;
-                        align-self: center;
-                        font-size: 12px;
+                        font-size: 13px;
                         margin-top: 5px;
+                        line-height: 15px;
                         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                     }
 
@@ -201,36 +188,26 @@
 
             @include responsive ('tablet') {
                 .card-bio {
-                    background-color: rgba(0, 0, 0, 0.761);
                     width: 22%;
-                    display: flex;
                     gap: 5px;
                     border-radius: 10px;
-                    padding: 0 2% 2% 2%;
+                    padding: 0 3% 3% 3%;
                 }   
 
             }
             @include responsive ('mobile') {
                 .card-bio {
-                    background-color: rgba(0, 0, 0, 0.761);
-                    width: 45%;
-                    display: flex;
-                    flex-direction: column;
-                    align-self: center;
+                    width:50%;
                     margin-left: 0%;
                     margin-bottom:35%;
-                    border-radius: 20px;
-                    padding: 0 5% 5% 5%;
-                    gap: 0px;
+                    border-radius: 15px;
+                    padding: 0 0 5% 0;
+                    gap:0px;
                 }
             }
         }
-
         @include responsive ('tablet') {
             .main-card {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
                 padding: 16% 0% 0% 0%;
             }
 
@@ -240,20 +217,22 @@
             .main-card {
                 display: flex;
                 flex-direction: column;
-                padding:0% 0% 0% 0%;
+                align-items: center;
+                padding:0 0 0 0;
             }
         }
 
         .main-bottom {
-            background-color: rgba(0, 0, 0, 0.761);
+            background-color: $light-dark;
             width: 85%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            align-self: center;
+            text-align: center;
             gap: 20px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             margin-top: 15%;
+            margin-bottom: 15%;
             border-radius: 20px;
             padding: 20px;
 
@@ -262,10 +241,9 @@
                 margin-top: 0;
             }
 
-            p {
+            p1 {
                 font-size: 25px;
                 width: 70%;
-                display: flex;
                 line-height: 1.5;
             }
 
@@ -276,10 +254,9 @@
                     letter-spacing: 1px;
                 }
 
-                p {
-                    font-size: 18px;
+                p1 {
+                    font-size:20px;
                     width: 80%;
-                    line-height: 1.5;
                 }
 
             }
@@ -289,7 +266,7 @@
                     font-size: 30px;
                 }
             
-                p {
+                p1 {
                     font-size: 14px;
                     width: 85%;
                     line-height: 1.2;
@@ -299,32 +276,18 @@
 
         @include responsive ('tablet') {
             .main-bottom {
-                background-color: rgba(0, 0, 0, 0.761);
                 width: 85%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
                 gap: 5px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                border-radius: 20px;
-                padding: 20px;
-                margin-top: 15%;
             }
         }
         @include responsive ('mobile') {
             .main-bottom {
-                background-color: rgba(22, 5, 5, 0.761);
                 width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                margin-top:0%;
-                margin: -10%;
+                margin-top:-13%;
                 padding: 10px;
                 border-radius: 0px;
+                margin-bottom:20%;
                 gap:0px;
             }
         }

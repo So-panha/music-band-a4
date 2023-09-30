@@ -1,1 +1,320 @@
 @import 'main';
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    background-color: $color-cards;
+    height: 70vh;
+    margin: 28px;
+    margin-top: 120px;
+    border-radius: 10px;
+    // border: 1px solid white;
+
+    .header-left {
+        img {
+            width: 80%;
+            height: 70%;
+            padding: 55px 0 0 55px;
+        }
+
+        @include responsive ('tablet') {
+            img {
+                width: 90%;
+                height: 45%;
+
+            }
+        }
+
+        @include responsive ('mobile') {
+            img {
+                width: 78%;
+                height: 80%;
+                padding-left: 39px;
+                margin-top: -25px;
+            }
+        }
+    }
+
+    .header-right {
+        display: grid;
+        text-align: justify;
+        margin: 0 60px 60px 40px;
+
+        h1 {
+            font-family: 'Caveat Brush';
+            font-size: 70px;
+            text-align: center;
+            margin-top: 40px;
+            display: grid;
+            text-transform: uppercase;
+            color: white;
+        }
+        p{
+            font-size: 25px;
+            color: white;
+        }
+
+        @include responsive ('tablet') {
+            h1 {
+                margin-top: 50px;
+                font-size: 50px;
+            }
+        }
+        @include responsive ('mobile') {
+            h1{
+                margin-top: 20px;
+                font-size: 35px;
+            }
+        }
+    }
+
+    @include responsive ('tablet') {
+        .header-right p {
+            margin: 40px 8px 95% 10px;
+            font-size: 15px;
+        }
+
+    }
+    @include responsive ('mobile') {
+        .header-right p {
+            margin: 10px 8px 95% 10px;
+            font-size: 10px;
+        }
+
+    }
+
+    @include responsive ('mobile') {
+        .header-right {
+            margin: 0 40px 100% 40px;
+        }
+    }
+}
+@include responsive ('tablet') {
+    header {
+       height: 68vh;
+    }
+}
+
+@include responsive ('mobile') {
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 85%;
+        margin-left: 30px;
+        height: 350px;
+    }
+}
+
+main {
+    .ticktets-header {
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            font-family: 'Caveat Brush';
+            background: $color-cards ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 17vh;
+            width: 35%;
+            margin-top: 50px;
+            border-radius: 10px;
+            font-size: 60px;
+            border: 1px solid white;
+            background: $main-color;
+            color: white;
+        }
+        @include responsive ('tablet') {
+            h1{
+                margin-top: 30px;
+                width: 35%;
+                height: 15vh;
+                font-size: 40px;
+            }
+        }
+        @include responsive ('mobile') {
+            h1{
+                margin-top: 30px;
+                width: 38%;
+                height: 10vh;
+                font-size: 19px;
+            }
+        }
+
+    }
+
+    .tickets {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        .ticket1,
+        .ticket2,
+        .ticket3 {
+            background: rgba(255, 255, 255, 0);
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 28.5%;
+            height: 520px;
+            border-radius: 10px;
+            margin: 50px 30px 0 30px;
+            backdrop-filter: blur(9px);
+
+            img {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                width: 73%;
+                margin-top: 50px;
+                border-radius: 10px;
+            }
+
+            @include responsive ('tablet') {
+                img {
+                    margin-top: 31px;
+                    width: 60%;
+                }
+            }
+            @include responsive ('mobile') {
+                img {
+                    margin-top: 31px;
+                    width: 80%;
+                }
+            }
+
+            .date {
+                display: flex;
+                margin-left: -20px;
+                margin-top: 20px;
+
+                p {
+                    margin-left: 7px;
+                    color: white;
+                    font-size: 1.2em;
+                }
+
+                @include responsive ('tablet') {
+                    p {
+                        font-size: 11px;
+                        margin-top: 6px;
+                        margin-left: 5px;
+                    }
+                }
+
+                .fa-calendar {
+                    color: rgb(51, 77, 77);
+                    font-size: large;
+                    
+                }
+                @include responsive ('mobile') {
+                    .fa-calendar{
+                        margin-left: -29%;
+                    }
+                }
+
+            }
+            .locations{
+                display: flex;
+                margin-left: -170px;
+                padding-top: 10px;
+                i{
+                    color: red;
+                    font-size: x-large;
+                    margin-top: -6px;
+                    cursor: pointer;
+                    
+                }
+
+                p{
+                    margin-left: 9px;
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    
+                }
+                a{
+                    color: blue;
+                    text-decoration: none;
+                }
+            }
+            @include responsive ('tablet') {
+                .locations{
+                    padding-top: 15px;
+                    margin-left: -89px;
+                    font-size: 11px;
+                }
+            }
+            @include responsive ('mobile') {
+                .locations{
+                    margin-left: -55%;
+                }
+            }
+
+            button {
+                background: rgb(51, 77, 77);
+                color: white;
+                height: 6.8vh;
+                width: 30%;
+                text-transform: uppercase;
+                font-weight: bolder;
+                border-radius: 10px;
+                border: none;
+                margin: 30px 0 0 170px;
+                cursor: pointer;
+
+            }
+
+            button:hover {
+                background: teal;
+            }
+            @include responsive ('tablet') {
+                button{
+                    font-size: 8px;
+                    border-radius: 7px;
+                    height: 5.5vh;
+                    margin: 20px 0 0 102px;
+                }
+            }
+            @include responsive ('mobile') {
+                button{
+                    margin-right: -70px;
+                }
+            }
+
+
+        }
+
+        @include responsive ('tablet') {
+
+            .ticket1,
+            .ticket2,
+            .ticket3 {
+                height: 65vh;
+                margin: 50px 15px 0 15px;
+
+            }
+        }
+
+        @include responsive ('mobile') {
+
+            .ticket1,
+            .ticket2,
+            .ticket3 {
+                height:445px;
+                width: 80%;
+
+            }
+        }
+    }
+    @include responsive ('mobile') {
+        .tickets{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+}

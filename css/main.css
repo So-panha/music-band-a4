@@ -216,7 +216,7 @@ footer .footer-right .id a {
 }
 @media screen and (max-width: 600px) {
   footer .footer-right .id {
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 footer .footer-right p {
@@ -234,8 +234,8 @@ footer .footer-right p {
 }
 @media screen and (max-width: 600px) {
   footer .footer-right {
-    grid-template-columns: 0.2fr 0.2fr 0.2fr;
-    margin: 0 0 30% 30%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: -20px 40px 20px 60px;
   }
 }
 
@@ -246,7 +246,7 @@ footer .footer-right p {
 }
 @media screen and (max-width: 600px) {
   footer {
-    height: 20vh;
+    height: 23vh;
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;

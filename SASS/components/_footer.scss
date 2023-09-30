@@ -1,10 +1,11 @@
 @import "../mixins/breakpoint";
+@import "variables";
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: rgb(51, 77, 77);
+    background-color:$main-color;
     height: 30vh;
-    color: white;
+    color: $color-text;
     .footer-left {
         display: grid;
         align-items: center;
@@ -45,7 +46,7 @@ footer {
             justify-items: center;
             text-align: center;
             a{
-                color: white;
+                color: $color-text;
                 text-decoration: none;
             }
         }

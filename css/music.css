@@ -391,8 +391,9 @@ footer .footer-right p {
 }
 @media screen and (max-width: 600px) {
   .mytap .taps {
-    width: 15%;
+    width: 15.1%;
     padding: 15px 3px;
+    font-size: 15px;
   }
 }
 .mytap .tab {

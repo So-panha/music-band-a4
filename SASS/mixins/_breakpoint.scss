@@ -1,7 +1,8 @@
 @import '../components/variables';
 $breakpoints: (
     'mobile': 600px,
-    'tablet': 830px
+    'tablet': 830px,
+    'computer':1024px
 );
 
 @mixin responsive($key) {

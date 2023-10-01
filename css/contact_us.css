@@ -265,6 +265,7 @@ main form {
   display: flex;
   justify-content: center;
   color: white;
+  height: 79.5vh;
   width: 900px;
   margin: 100px auto;
 }
@@ -386,12 +387,8 @@ main form .contact_us_left .input-box-text label {
 main form .contact_us_left .contact-us-send {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  background: rgb(51, 77, 77);
-=======
   justify-content: center;
   background: teal;
->>>>>>> 5da7cb0f70be87326cd59bc7d96518f3e7598843
   border-radius: 10px;
   margin-right: -46%;
   margin-top: 30px;
@@ -420,11 +417,7 @@ main form .contact_us_left .contact-us-send {
   }
 }
 main form .contact_us_left .contact-us-send:hover {
-<<<<<<< HEAD
-  background: teal;
-=======
   background: black;
->>>>>>> 5da7cb0f70be87326cd59bc7d96518f3e7598843
   color: white;
   transition: 0.5s;
 }
@@ -432,7 +425,7 @@ main form .contact_us_left .header {
   margin-bottom: 20px;
 }
 main form .contact_us_left .header h1 {
-  background: rgb(51, 77, 77);
+  background: teal;
   display: flex;
   align-items: center;
   justify-content: center;

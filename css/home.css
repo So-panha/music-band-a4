@@ -291,8 +291,8 @@ header .header-right {
   margin: 0 60px 60px 40px;
 }
 header .header-right h1 {
-  margin-family: "Caveat Brush";
-  margin-size: 70px;
+  font-family: "Caveat Brush";
+  font-size: 70px;
   text-align: center;
   margin-top: 40px;
   display: grid;
@@ -354,15 +354,10 @@ main .ticktets-header h1 {
   font-family: "Caveat Brush";
   background: rgba(0, 0, 0, 0.635);
   display: flex;
+  justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   height: 20vh;
   width: 38%;
-=======
-  justify-content: center;
-  height: 17vh;
-  width: 35%;
->>>>>>> 5da7cb0f70be87326cd59bc7d96518f3e7598843
   margin-top: 50px;
   border-radius: 10px;
   font-size: 80px;
@@ -451,9 +446,9 @@ main .ticktets-header h1:hover {
 }
 main .tickets {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: auto;
+  align-items: center;
+  margin: 100px auto;
 }
 main .tickets .ticket1,
 main .tickets .ticket2,
@@ -466,20 +461,15 @@ main .tickets .ticket3 {
   height: 510px;
   border-radius: 10px;
   margin: 50px 30px 0 30px;
-<<<<<<< HEAD
   transform: scale(calc(1 + var(--hover) * 0.1));
   transition: transform 1s;
-=======
-  -webkit-backdrop-filter: blur(9px);
-          backdrop-filter: blur(9px);
->>>>>>> 5da7cb0f70be87326cd59bc7d96518f3e7598843
 }
 main .tickets .ticket1 img,
 main .tickets .ticket2 img,
 main .tickets .ticket3 img {
   display: flex;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
   width: 73%;
   margin-top: 50px;
   border-radius: 10px;
@@ -602,8 +592,8 @@ main .tickets .ticket1 .locations p,
 main .tickets .ticket2 .locations p,
 main .tickets .ticket3 .locations p {
   margin-left: 9px;
-  margin-size: 1.1em;
-  margin-weight: bold;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 main .tickets .ticket1 .locations a,
 main .tickets .ticket2 .locations a,

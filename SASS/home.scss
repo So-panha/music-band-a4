@@ -1,5 +1,4 @@
 @import 'main';
-@import "./mixins/groups_mixin";
 
 header {
     display: grid;
@@ -8,8 +7,7 @@ header {
     height: 70vh;
     margin: 28px;
     margin-top: 120px;
-    @include  border-redius;
-    // border: 1px solid white;
+    border-radius: 10px;
 
     .header-left {
         img {
@@ -43,20 +41,18 @@ header {
         margin: 0 60px 60px 40px;
 
         h1 {
-            margin: {
-                family: 'Caveat Brush';
-                size: 70px;
-            }
+            font-family: 'Caveat Brush';
+            font-size: 70px;
             text-align: center;
             margin-top: 40px;
             display: grid;
             text-transform: uppercase;
-            color:$color-text;
+            color: white;
         }
 
         p {
             font-size: 25px;
-            color: $color-text;
+            color: white;
         }
 
         @include responsive ('tablet') {
@@ -121,22 +117,50 @@ main {
         h1 {
             font-family: 'Caveat Brush';
             background: $color-cards ;
-            @include centered-center;
-            height: 17vh;
-            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            width: 38%;
             margin-top: 50px;
-            @include  border-redius;
-            font-size: 60px;
-            border: 1px solid $color-text;
-            background: $main-color;
-            color: $color-text;
-        }
-        @include responsive ('tablet') {
-            h1{
-                margin-top: 30px;
-                width: 35%;
-                height: 15vh;
-                font-size: 40px;
+            border-radius: 10px;
+            font-size: 80px;
+            color: white;
+            transform:
+                scale(calc(1 + (var(--hover) * 0.1)));
+            transition: transform 1s;
+
+            span li {
+                position: relative;
+                list-style: none;
+                display: flex;
+
+            }
+
+            span li a {
+                font-size: 1em;
+                text-decoration: none;
+                letter-spacing: 2px;
+                line-height: 1em;
+                text-transform: uppercase;
+                color: transparent;
+            }
+
+            span li a::before {
+                content: attr(data-text);
+                position: absolute;
+                color: var(--clr);
+                height: 12vh;
+                overflow: hidden;
+                transition: 0.5s;
+
+            }
+
+            span li a:hover {
+                content: attr(data-text);
+                width: 120%;
+                -webkit-text-stroke: 1px orange;
+                filter: drop-shadow(0 0 25px orange)
             }
         }
 
@@ -207,28 +231,44 @@ main {
     }
 
     .tickets {
-        @include centered-center;
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px auto;
 
         .ticket1,
         .ticket2,
         .ticket3 {
-            background: rgba(255, 255, 255, 0);
-            border: 1px solid $color-text;
-           @include flex-column;
+            background-color: $color-cards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 28.5%;
-            height: 520px;
-            @include  border-redius;
+            height: 510px;
+            border-radius: 10px;
             margin: 50px 30px 0 30px;
             transform:
                 scale(calc(1 + (var(--hover) * 0.1)));
             transition: transform 1s;
 
             img {
-                @include centered-center;
+                display: flex;
+                justify-items: center;
+                align-items: center;
                 width: 73%;
                 margin-top: 50px;
-                @include  border-redius;
+                border-radius: 10px;
+                transform:
+                    scale(calc(1 + (var(--hover) * 0.1)));
+                transition: transform 1s;
+
+            }
+
+            @include responsive ('laptop') {
+                img {
+                    margin-top: 35px;
+                    width: 80%;
+                }
             }
 
             @include responsive ('tablet') {
@@ -247,29 +287,25 @@ main {
 
             .date {
                 display: flex;
-                margin: {
-                    left: -20px;
-                    top: 20px;
-                }
+                margin-left: -3%;
+                margin-top: 20px;
 
                 p {
                     margin-left: 7px;
-                    color: $color-text;
+                    color: white;
                     font-size: 1.2em;
                 }
 
                 @include responsive ('tablet') {
                     p {
                         font-size: 11px;
-                        margin: {
-                            top: 6px;
-                            left: 5px;
-                        }
+                        margin-top: 6px;
+                        margin-left: 5px;
                     }
                 }
 
                 .fa-calendar {
-                    color: $main-color;
+                    color: teal;
                     font-size: large;
 
                 }
@@ -328,11 +364,9 @@ main {
 
                 p {
                     margin-left: 9px;
-                    margin: {
-                        size: 1.1em;
-                        weight: bold;
-                    }
-                    
+                    font-size: 1.1em;
+                    font-weight: bold;
+
                 }
 
                 a {
@@ -375,13 +409,8 @@ main {
             }
 
             button {
-                background: $main-color;
-                color: $color-text;
-                height: 6.8vh;
-                width: 30%;
                 text-transform: uppercase;
-                font-weight: bolder;
-                @include  border-redius;
+                border-radius: 10px;
                 border: none;
                 margin: 0 0 0 80px;
                 cursor: pointer;
@@ -398,6 +427,7 @@ main {
                 }
 
                 .centered {
+                    // background-image: linear-gradient(to right bottom, #084a4a, #035f5d, #00766f, #008c80, #0aa490);
                     background-image: linear-gradient(to right bottom, #046464, #00726d, #007f74, #008d79, #149b7d);
                     height: 7vh;
                     width: 100px;
@@ -493,8 +523,13 @@ main {
 
             }
 
-            button:hover {
-                background: $color-teal;
+            @include responsive ('laptop') {
+                button {
+                    font-size: 0.9em;
+                    height: 5vh;
+                    margin: 3% 0 0 23%;
+
+                }
             }
 
             @include responsive ('tablet') {

@@ -40,7 +40,7 @@ nav .name-band {
   top: 25px;
   font-family: "Caveat Brush";
 }
-nav img {
+nav .return img {
   border-radius: 50px;
   position: absolute;
   top: 14px;
@@ -110,7 +110,7 @@ label #cancel {
 }
 
 @media screen and (max-width: 830px) {
-  nav img {
+  nav a img {
     left: 8%;
   }
   nav ul {
@@ -118,9 +118,6 @@ label #cancel {
   }
   p {
     margin-left: 30px;
-  }
-  nav ul li {
-    padding: 0 10px 0 10px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -270,7 +267,6 @@ footer .footer-right p {
   background-color: rgba(0, 0, 0, 0.635);
   width: 85%;
   display: flex;
-  box-shadow: 5px 10px 8px 8px black;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -420,8 +416,8 @@ footer .footer-right p {
   }
 }
 @media screen and (max-width: 600px) {
-  .container main a {
-    font-size: 20px;
+  .container main h1 {
+    font-size: 30px;
     margin-top: 20%;
     margin-bottom: 25%;
   }
@@ -536,7 +532,6 @@ footer .footer-right p {
 .container main .main-bottom {
   background-color: rgba(0, 0, 0, 0.635);
   width: 85%;
-  box-shadow: 5px 10px 8px 8px black;
   display: flex;
   flex-direction: column;
   align-items: center;

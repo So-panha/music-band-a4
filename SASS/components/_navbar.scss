@@ -18,7 +18,7 @@ nav {
         font-family: 'Caveat Brush';
     }
 
-    img {
+    .return img {
         border-radius: 50px;
         position: absolute;
         top: 14px;
@@ -98,7 +98,7 @@ label #cancel {
 }
 
 @include responsive ('tablet') {
-    nav img {
+    nav a img {
         left: 8%;
     }
 
@@ -108,10 +108,6 @@ label #cancel {
 
     p {
         margin-left: 30px;
-    }
-
-    nav ul li {
-        padding: 0 10px 0 10px;
     }
 }
 

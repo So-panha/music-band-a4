@@ -36,6 +36,8 @@
     }
 
 }
+
+
     
 @include responsive("tablet"){
         .card{
@@ -87,6 +89,17 @@
     }
     
 }
+
+@include responsive("computer"){
+    .main-card{
+        width: 98%;
+        height: $legth;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+}
+
+
 @include responsive("tablet"){
     .main-card{
         width: 92%;

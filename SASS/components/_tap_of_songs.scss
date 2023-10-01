@@ -21,19 +21,26 @@
         color: $color-text;
 
     }
-    @include responsive ("tablet"){
+    @include responsive ("computer") {
+        .taps {
+            width: 11.78%;
+        }
+    }
+
+    @include responsive ("tablet") {
         .taps {
             width: 10.15%;
         }
     }
-    @include responsive("mobile"){
+
+    @include responsive("mobile") {
         .taps {
             width: 15.1%;
-            padding: 15px 3px ;
+            padding: 15px 3px;
             font-size: 15px;
         }
     }
-    
+
     .tab {
         width: $legth;
         height: 60vh;
@@ -42,14 +49,15 @@
         border-radius: 0px 0px 10px 10px;
         order: 1;
         display: none;
-        
+
         .album {
             @include border-redius;
-            width:$legth;
+            width: $legth;
             height: 95%;
             display: flex;
             margin: auto;
             gap: 20px;
+
             .fa-spin {
                 width: 470px;
                 height: $legth;
@@ -57,57 +65,139 @@
                 border: 3px solid white;
                 animation-duration: 15s;
             }
-            @include responsive ("tablet"){
+
+            @include responsive ("tablet") {
                 .fa-spin {
                     width: 400px;
                     height: 60%;
                     align-self: center;
                 }
             }
-            @include responsive("mobile"){
+
+            @include responsive("mobile") {
                 .fa-spin {
                     width: 70%;
                     height: 70%;
                 }
             }
-            
+
             .lists {
                 @include border-redius;
-                background-color:$light-dark;
+                background-color: $light-dark;
                 border: 1px solid rgba(255, 255, 255, 0.534);
                 width: $legth;
                 height: $legth;
                 overflow: scroll;
+
                 .scroll {
                     height: 40%;
-                    
+
+                    .song:hover {
+                        background-color: rgb(218, 215, 215);
+                    }
+
+                    .song {
+                        a:hover {
+                            color: blue;
+                        }
+
+                    }
+
+                    .song:hover {
+                        .sound {
+                            position: relative;
+                            top: 0px;
+                            right: 0px;
+                            float: right;
+                            height: 5px;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        @include responsive("mobile") {
+                            .sound{
+                                display: none;
+                            }
+                        }
+
+
+                        .sound span {
+                            width: 4px;
+                            margin: 0 1px;
+                            border-radius: 5px;
+                            background-color: #000;
+                            animation: loader 1s infinite;
+                        }
+
+                        @keyframes loader {
+                            0%,
+                            100% {
+                                height: 20%;
+                            }
+
+                            25% {
+                                height: 30px;
+                            }
+                        }
+
+                        .sound span:nth-child(1) {
+                            animation-delay: .2s;
+                        }
+
+                        .sound span:nth-child(2) {
+                            animation-delay: .3s;
+                        }
+
+                        .sound span:nth-child(3) {
+                            animation-delay: .5s;
+                        }
+
+                        .sound span:nth-child(4) {
+                            animation-delay: .2s;
+                        }
+
+                            
+                      
+                    }
+
+    
+
+                    .title {
+                        width: 90%;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                    }
                 }
-                @include responsive("mobile"){
+
+                @include responsive("mobile") {
                     .scroll {
                         height: $legth;
                     }
                 }
-            
+
             }
-            
+
         }
-        
-        @include responsive("mobile"){
+
+        @include responsive("mobile") {
             .album {
                 flex-direction: column;
             }
         }
-        
+
     }
-    @include responsive("mobile"){
+
+    @include responsive("mobile") {
         .tab {
             height: 600px;
         }
     }
-   
-    
+
+
 }
-@include responsive ("tablet"){
+
+@include responsive ("tablet") {
     .mytap {
         margin: 90px auto;
 

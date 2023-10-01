@@ -11,8 +11,19 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  animation: transition 0.75s;
 }
 
+@keyframes transition {
+  from {
+    opacity: 0;
+    transform: rotateX("-10deg");
+  }
+  to {
+    opacity: 1;
+    transform: matrix(0);
+  }
+}
 nav {
   height: 80px;
   width: 100%;
@@ -21,12 +32,7 @@ nav {
   top: 0;
   z-index: 1;
 }
-
-.nav-left {
-  display: flex;
-}
-
-.name-band {
+nav .name-band {
   font-size: 25px;
   color: white;
   position: absolute;
@@ -34,33 +40,31 @@ nav {
   top: 25px;
   font-family: "Caveat Brush";
 }
-
 nav img {
   border-radius: 50px;
   position: absolute;
   top: 14px;
   left: 5%;
 }
-
 nav ul {
   margin: 0 0 0 57%;
 }
-
 nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 15px;
   justify-content: space-between;
-  padding: 0 20px 0 20px;
+  padding: 0 20px 0 38px;
 }
-
 nav ul li a {
   position: relative;
   color: white;
   font-style: 18px;
   padding: 5px 0;
 }
-
+nav ul li a:hover {
+  color: #E4E271;
+}
 nav ul li a:before {
   position: absolute;
   content: "";
@@ -73,7 +77,6 @@ nav ul li a:before {
   transform-origin: right;
   transition: transform 0.4s linear;
 }
-
 nav ul li a:hover:before {
   transform: scaleX(1);
   transform-origin: left;
@@ -94,7 +97,7 @@ label #cancel {
   display: none;
 }
 
-@media (max-width: 830px) {
+@media screen and (max-width: 830px) {
   nav img {
     left: 8%;
   }
@@ -106,18 +109,6 @@ label #cancel {
   }
   nav ul li {
     padding: 0 10px 0 10px;
-  }
-}
-@media (max-width: 944px) {
-  nav img {
-    left: 6%;
-    top: 15px;
-  }
-  .name-band {
-    margin-left: 40px;
-  }
-  nav ul li a {
-    font-style: 17px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -158,6 +149,14 @@ label #cancel {
     display: block;
   }
 }
+.hover-home,
+.hover-music,
+.hover-contact,
+.hover-about {
+  color: #E4E271;
+  border-bottom: 4px solid #E4E271;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;

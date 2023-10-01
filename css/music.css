@@ -11,8 +11,19 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  animation: transition 0.75s;
 }
 
+@keyframes transition {
+  from {
+    opacity: 0;
+    transform: rotateX("-10deg");
+  }
+  to {
+    opacity: 1;
+    transform: matrix(0);
+  }
+}
 nav {
   height: 80px;
   width: 100%;
@@ -21,12 +32,7 @@ nav {
   top: 0;
   z-index: 1;
 }
-
-.nav-left {
-  display: flex;
-}
-
-.name-band {
+nav .name-band {
   font-size: 25px;
   color: white;
   position: absolute;
@@ -34,33 +40,31 @@ nav {
   top: 25px;
   font-family: "Caveat Brush";
 }
-
 nav img {
   border-radius: 50px;
   position: absolute;
   top: 14px;
   left: 5%;
 }
-
 nav ul {
   margin: 0 0 0 57%;
 }
-
 nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 15px;
   justify-content: space-between;
-  padding: 0 20px 0 20px;
+  padding: 0 20px 0 38px;
 }
-
 nav ul li a {
   position: relative;
   color: white;
   font-style: 18px;
   padding: 5px 0;
 }
-
+nav ul li a:hover {
+  color: #E4E271;
+}
 nav ul li a:before {
   position: absolute;
   content: "";
@@ -73,7 +77,6 @@ nav ul li a:before {
   transform-origin: right;
   transition: transform 0.4s linear;
 }
-
 nav ul li a:hover:before {
   transform: scaleX(1);
   transform-origin: left;
@@ -94,7 +97,7 @@ label #cancel {
   display: none;
 }
 
-@media (max-width: 830px) {
+@media screen and (max-width: 830px) {
   nav img {
     left: 8%;
   }
@@ -106,18 +109,6 @@ label #cancel {
   }
   nav ul li {
     padding: 0 10px 0 10px;
-  }
-}
-@media (max-width: 944px) {
-  nav img {
-    left: 6%;
-    top: 15px;
-  }
-  .name-band {
-    margin-left: 40px;
-  }
-  nav ul li a {
-    font-style: 17px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -158,6 +149,14 @@ label #cancel {
     display: block;
   }
 }
+.hover-home,
+.hover-music,
+.hover-contact,
+.hover-about {
+  color: #E4E271;
+  border-bottom: 4px solid #E4E271;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -354,6 +353,14 @@ footer .footer-right p {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .main-card {
+    width: 98%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
 @media screen and (max-width: 830px) {
   .main-card {
     width: 92%;
@@ -383,6 +390,11 @@ footer .footer-right p {
   text-align: center;
   font-weight: bold;
   color: white;
+}
+@media screen and (max-width: 1024px) {
+  .mytap .taps {
+    width: 11.78%;
+  }
 }
 @media screen and (max-width: 830px) {
   .mytap .taps {
@@ -443,6 +455,59 @@ footer .footer-right p {
 }
 .mytap .tab .album .lists .scroll {
   height: 40%;
+}
+.mytap .tab .album .lists .scroll .song:hover {
+  background-color: rgb(218, 215, 215);
+}
+.mytap .tab .album .lists .scroll .song a:hover {
+  color: blue;
+}
+.mytap .tab .album .lists .scroll .song:hover .sound {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  float: right;
+  height: 5px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .mytap .tab .album .lists .scroll .song:hover .sound {
+    display: none;
+  }
+}
+.mytap .tab .album .lists .scroll .song:hover .sound span {
+  width: 4px;
+  margin: 0 1px;
+  border-radius: 5px;
+  background-color: #000;
+  animation: loader 1s infinite;
+}
+@keyframes loader {
+  0%, 100% {
+    height: 20%;
+  }
+  25% {
+    height: 30px;
+  }
+}
+.mytap .tab .album .lists .scroll .song:hover .sound span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.mytap .tab .album .lists .scroll .song:hover .sound span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.mytap .tab .album .lists .scroll .song:hover .sound span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.mytap .tab .album .lists .scroll .song:hover .sound span:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.mytap .tab .album .lists .scroll .title {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 @media screen and (max-width: 600px) {
   .mytap .tab .album .lists .scroll {

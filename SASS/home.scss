@@ -208,8 +208,7 @@ main {
 
     .tickets {
         @include centered-center;
-        margin: auto;
-
+        margin: 100px auto;
         .ticket1,
         .ticket2,
         .ticket3 {

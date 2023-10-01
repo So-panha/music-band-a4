@@ -22,6 +22,9 @@
         color: $color-text;
 
     }
+    .taps:hover{
+        background-color: gray;
+    }
     @include responsive ("computer") {
         .taps {
             width: 11.78%;
@@ -36,7 +39,7 @@
 
     @include responsive("mobile") {
         .taps {
-            width: 15.1%;
+            width: 15%;
             padding: 15px 3px;
             font-size: 15px;
         }

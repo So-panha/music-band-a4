@@ -4,7 +4,7 @@
     @include flex-column;
     color: $color-text;
     header {
-        background-color: $light-dark ;
+        background-color: $color-cards;
         width: 85%;
         @include flex-column;
         text-align: center;
@@ -12,7 +12,7 @@
         margin-top: 8%;
         padding: 20px;
         gap: 20px;
-        border-radius: 20px;
+        border-radius: 10px;
 
         h1 {
             font-size: 50px;
@@ -24,7 +24,6 @@
             width: 70%;
             line-height: 1.5;
         }
-
         @include responsive ('tablet') {
             h1 {
                 font-size: 40px;
@@ -35,7 +34,7 @@
                 font-size:20px;
                 width: 80%;
                 line-height: 1.3;
-            }
+                }
 
         }
 
@@ -53,7 +52,14 @@
 
         }
     }
-
+    header:hover {
+        box-shadow: 5px 10px 8px 8px rgba(255, 255, 255, 0.199);
+    }
+    @include responsive ('computer') {
+        header {
+            margin-top: 10%;
+        }
+    }
     @include responsive ('tablet') {
         header {
             gap: 10px;
@@ -71,36 +77,106 @@
             padding: 10px;
             border-radius: 0px;
         }
-
     }
-
     main {
         @include flex-column;
         text-align: center;
-
-        h1 {
-            display: flex;
-            align-self: center;
-            font-size: 50px;
+        a {
+            position: relative;
+            background-color: $color-cards;
+            color: #fff;
             margin-top: 15%;
-            letter-spacing: 1px;
-        }
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            font-size:40px;
+            font-weight:400;
+            padding:10px 30px ;
+            border-radius: 10px;
+            transition: 0.5s;
+            z-index: 0;
+            span {
+                position: relative;
+                z-index: 1;
+            }
+            i {
+                position: absolute;
+                inset: 0;
+                display: block;
+            }
+            i:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 80%;
+                width: 10px;
+                height: 4px;
+                background-color: #27282c;
+                transform: translateX(-50%) skew(325deg);
+                transition: 0.5s;
+            }
+            i::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 20%;
+                width: 10px;
+                height: 4px;
+                background-color: #27282c;
+                transform: translateX(-50%) skew(325deg);
+                transition: 0.5s;
+            }
 
+        }
+        a:hover {
+            background-color: var(--clr);
+            color: var(--clr);
+            letter-spacing:0.25em;
+            box-shadow: 0 0 35px var(--clr);
+            i::before {
+                width: 20px;
+                left: 20%;
+            }
+            i::after {
+                width: 20px;
+                left: 80%;
+            }
+        }
+        a:before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background:#27282c ;          
+            border-radius: 10px;
+        }
+        @include responsive ('computer') {
+            a {
+                margin-bottom: 4%;
+                margin-top:18%;
+            }
+        }
         @include responsive ('tablet') {
-            h1 {
-                font-size: 40px;
-                margin-bottom:0%;
+            a {
+                font-size:33px;
+                margin-bottom:4%;
             }
         }
 
         @include responsive ('mobile') {
+<<<<<<< HEAD
+            a {
+                font-size:20px;
+                margin-top: 20%;
+                margin-bottom: 25%;
+=======
             h1 {
                 font-size: 30px;
                 margin: {
                     top: 20%;
                     bottom:25%;
                 }
+>>>>>>> 108161e3dac1a04763892c97c7a530f2748989db
             }
+            // h1 {
         }
 
         .main-card {
@@ -114,6 +190,7 @@
                 width: 20%;
                 @include flex-column;
                 gap: 10px;
+                box-shadow: 5px 10px 8px 8px black;
                 border-radius: 20px;
                 padding: 0 2% 2% 2%;
 
@@ -124,7 +201,7 @@
                     border: 5px solid $color-text;
                     margin-top: -125px;
                 }
-
+                    
                 h3 {
                     font-size: 30px;
                 }
@@ -177,8 +254,14 @@
                     }
 
                 }
-
-
+            }   
+            .card-bio:hover {
+                box-shadow: 5px 10px 8px 8px rgba(255, 255, 255, 0.199);
+            }
+            @include responsive ('computer') {
+                .card-bio {
+                    width: 25%;
+                }
             }
 
             @include responsive ('tablet') {
@@ -218,9 +301,16 @@
         }
 
         .main-bottom {
-            background-color: $light-dark;
+            background-color:$color-cards;
             width: 85%;
+<<<<<<< HEAD
+            box-shadow: 5px 10px 8px 8px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+=======
             @include flex-column;
+>>>>>>> 108161e3dac1a04763892c97c7a530f2748989db
             text-align: center;
             gap: 20px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -268,7 +358,15 @@
                 }
             }
         }
-
+        .main-bottom:hover {
+            box-shadow: 5px 10px 8px 8px rgba(255, 255, 255, 0.199);
+        }
+        @include responsive ('computer') {
+            .main-bottom {
+                margin-top: 18%;
+                margin-bottom: 18%;
+            }
+        }
         @include responsive ('tablet') {
             .main-bottom {
                 width: 85%;
@@ -298,5 +396,3 @@
         }
     }
 }
-
-

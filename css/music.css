@@ -400,6 +400,9 @@ footer .footer-right p {
   font-weight: bold;
   color: white;
 }
+.mytap .taps:hover {
+  background-color: gray;
+}
 @media screen and (max-width: 1024px) {
   .mytap .taps {
     width: 11.78%;
@@ -412,7 +415,7 @@ footer .footer-right p {
 }
 @media screen and (max-width: 600px) {
   .mytap .taps {
-    width: 15.1%;
+    width: 15%;
     padding: 15px 3px;
     font-size: 15px;
   }

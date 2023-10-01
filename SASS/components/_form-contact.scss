@@ -1,4 +1,6 @@
 @import "../mixins/breakpoint";
+@import "../mixins/groups_mixin";
+@import "variables";
 
 main {
     display: flex;
@@ -7,7 +9,7 @@ main {
     form {
         display: flex;
         justify-content: center;
-        color: white;
+        color: $color-text;
         height: 79.5vh;
         width: 900px;
         margin: 100px auto;
@@ -23,9 +25,7 @@ main {
 
             .contact_us_right_text {
                 background: #334D4D;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+               @include centered-center;
                 height: 20.9vh;
                 border-radius: 0 0 20px 0;
                 font-size: 2em;
@@ -33,7 +33,7 @@ main {
                 margin-top: -4px;
 
                 h3 {
-                    color: white;
+                    color: $color-text;
                     font-family: 'Irish Grover';
                     transform:
                         scale(calc(1 + (var(--hover) * 0.1)));
@@ -46,8 +46,10 @@ main {
             }
 
             img {
-                margin-top: 5px;
-                margin-left: 15px;
+                margin: {
+                    top: 5px;
+                    left: 15px;
+                }
                 width: 92%;
                 transform:
                     scale(calc(1 + (var(--hover) * 0.1)));
@@ -67,18 +69,16 @@ main {
         }
 
         .contact_us_left {
-            background: rgba(0, 0, 0, 0.493);
-            display: flex;
-            justify-content: center;
+            background:$color-cards;
+            @include centered-center;
             flex-direction: column;
-            align-items: center;
             border-radius: 20px 0 0 20px;
 
             .input-box {
                 position: relative;
                 width: 320px;
                 margin: 10px 0;
-                border-bottom: 2px solid #ffffff;
+                border-bottom: 2px solid $color-text;
 
                 label {
                     position: absolute;
@@ -93,7 +93,7 @@ main {
 
                 input {
                     background: transparent;
-                    color: white;
+                    color: $color-text;
                     width: 96%;
                     height: 50px;
                     border: none;
@@ -131,7 +131,7 @@ main {
                 textarea {
                     transform: translateY(15%);
                     border-radius: 5px;
-                    border: 2px solid teal;
+                    border: 2px solid $color-teal;
                     padding: 7.5px;
                     font-size: 0.9em;
                     width: 310px;
@@ -155,13 +155,13 @@ main {
             }
 
             .contact-us-send {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: teal;
-                border-radius: 10px;
-                margin-right: -46%;
-                margin-top: 30px;
+                @include centered-center;
+                background: $color-teal;
+                @include border-redius;
+                margin: {
+                    right: -46%;
+                    top: 30px;
+                }
                 width: 120px;
                 height: 7vh;
                 cursor: pointer;
@@ -177,8 +177,10 @@ main {
 
             @include responsive ('tablet') {
                 .contact-us-send {
-                    margin-top: 40px;
-                    margin-left: -46%;
+                    margin: {
+                        top: 40px;
+                        left: -46%;
+                    }
                     height: 6.5vh;
                     width: 54%;
                 }
@@ -194,8 +196,8 @@ main {
             }
 
             .contact-us-send:hover {
-                background: #000;
-                color: white;
+                background: $dark-black;
+                color: $color-text;
                 transition: 0.5s;
             }
             .header{
@@ -203,11 +205,9 @@ main {
             }
 
             .header h1 {
-                background: teal;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 10px;
+                background: $color-teal;
+                @include centered-center;
+                @include border-redius;
                 text-transform: uppercase;
                 font-size: 25px;
                 height: 10vh;

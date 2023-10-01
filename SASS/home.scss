@@ -1,4 +1,5 @@
 @import 'main';
+@import "./mixins/groups_mixin";
 
 header {
     display: grid;
@@ -7,7 +8,7 @@ header {
     height: 70vh;
     margin: 28px;
     margin-top: 120px;
-    border-radius: 10px;
+    @include  border-redius;
     // border: 1px solid white;
 
     .header-left {
@@ -41,17 +42,19 @@ header {
         margin: 0 60px 60px 40px;
 
         h1 {
-            font-family: 'Caveat Brush';
-            font-size: 70px;
+            margin: {
+                family: 'Caveat Brush';
+                size: 70px;
+            }
             text-align: center;
             margin-top: 40px;
             display: grid;
             text-transform: uppercase;
-            color: white;
+            color:$color-text;
         }
         p{
             font-size: 25px;
-            color: white;
+            color: $color-text;
         }
 
         @include responsive ('tablet') {
@@ -113,17 +116,15 @@ main {
         h1 {
             font-family: 'Caveat Brush';
             background: $color-cards ;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centered-center;
             height: 17vh;
             width: 35%;
             margin-top: 50px;
-            border-radius: 10px;
+            @include  border-redius;
             font-size: 60px;
-            border: 1px solid white;
+            border: 1px solid $color-text;
             background: $main-color;
-            color: white;
+            color: $color-text;
         }
         @include responsive ('tablet') {
             h1{
@@ -145,32 +146,26 @@ main {
     }
 
     .tickets {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include centered-center;
         margin: auto;
 
         .ticket1,
         .ticket2,
         .ticket3 {
             background: rgba(255, 255, 255, 0);
-            border: 1px solid white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            border: 1px solid $color-text;
+           @include flex-column;
             width: 28.5%;
             height: 520px;
-            border-radius: 10px;
+            @include  border-redius;
             margin: 50px 30px 0 30px;
             backdrop-filter: blur(9px);
 
             img {
-                display: flex;
-                justify-items: center;
-                align-items: center;
+                @include centered-center;
                 width: 73%;
                 margin-top: 50px;
-                border-radius: 10px;
+                @include  border-redius;
             }
 
             @include responsive ('tablet') {
@@ -188,25 +183,29 @@ main {
 
             .date {
                 display: flex;
-                margin-left: -20px;
-                margin-top: 20px;
+                margin: {
+                    left: -20px;
+                    top: 20px;
+                }
 
                 p {
                     margin-left: 7px;
-                    color: white;
+                    color: $color-text;
                     font-size: 1.2em;
                 }
 
                 @include responsive ('tablet') {
                     p {
                         font-size: 11px;
-                        margin-top: 6px;
-                        margin-left: 5px;
+                        margin: {
+                            top: 6px;
+                            left: 5px;
+                        }
                     }
                 }
 
                 .fa-calendar {
-                    color: rgb(51, 77, 77);
+                    color: $main-color;
                     font-size: large;
                     
                 }
@@ -231,8 +230,10 @@ main {
 
                 p{
                     margin-left: 9px;
-                    font-size: 1.1em;
-                    font-weight: bold;
+                    margin: {
+                        size: 1.1em;
+                        weight: bold;
+                    }
                     
                 }
                 a{
@@ -254,13 +255,13 @@ main {
             }
 
             button {
-                background: rgb(51, 77, 77);
-                color: white;
+                background: $main-color;
+                color: $color-text;
                 height: 6.8vh;
                 width: 30%;
                 text-transform: uppercase;
                 font-weight: bolder;
-                border-radius: 10px;
+                @include  border-redius;
                 border: none;
                 margin: 30px 0 0 170px;
                 cursor: pointer;
@@ -268,7 +269,7 @@ main {
             }
 
             button:hover {
-                background: teal;
+                background: $color-teal;
             }
             @include responsive ('tablet') {
                 button{

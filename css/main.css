@@ -11,8 +11,19 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  animation: transition 0.75s;
 }
 
+@keyframes transition {
+  from {
+    opacity: 0;
+    transform: rotateX("-10deg");
+  }
+  to {
+    opacity: 1;
+    transform: matrix(0);
+  }
+}
 nav {
   height: 80px;
   width: 100%;
@@ -21,12 +32,7 @@ nav {
   top: 0;
   z-index: 1;
 }
-
-.nav-left {
-  display: flex;
-}
-
-.name-band {
+nav .name-band {
   font-size: 25px;
   color: white;
   position: absolute;
@@ -34,33 +40,38 @@ nav {
   top: 25px;
   font-family: "Caveat Brush";
 }
-
-nav img {
+nav .return img {
   border-radius: 50px;
   position: absolute;
   top: 14px;
   left: 5%;
 }
-
 nav ul {
   margin: 0 0 0 57%;
 }
-
 nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 15px;
   justify-content: space-between;
-  padding: 0 20px 0 20px;
+  padding: 0 20px 0 38px;
 }
-
 nav ul li a {
   position: relative;
   color: white;
   font-style: 18px;
   padding: 5px 0;
 }
-
+nav ul li .hover-home,
+nav ul li .hover-music,
+nav ul li .hover-contact,
+nav ul li .hover-about {
+  color: #E4E271;
+  border-bottom: 4px solid #E4E271;
+}
+nav ul li a:hover {
+  color: #E4E271;
+}
 nav ul li a:before {
   position: absolute;
   content: "";
@@ -73,10 +84,14 @@ nav ul li a:before {
   transform-origin: right;
   transition: transform 0.4s linear;
 }
-
 nav ul li a:hover:before {
   transform: scaleX(1);
   transform-origin: left;
+}
+@media screen and (max-width: 1024px) {
+  nav ul li {
+    margin-right: -30px;
+  }
 }
 
 label #btn,
@@ -94,8 +109,8 @@ label #cancel {
   display: none;
 }
 
-@media (max-width: 830px) {
-  nav img {
+@media screen and (max-width: 830px) {
+  nav a img {
     left: 8%;
   }
   nav ul {
@@ -103,21 +118,6 @@ label #cancel {
   }
   p {
     margin-left: 30px;
-  }
-  nav ul li {
-    padding: 0 10px 0 10px;
-  }
-}
-@media (max-width: 944px) {
-  nav img {
-    left: 6%;
-    top: 15px;
-  }
-  .name-band {
-    margin-left: 40px;
-  }
-  nav ul li a {
-    font-style: 17px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -130,7 +130,7 @@ label #cancel {
   ul {
     position: fixed;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: rgb(51, 77, 77);
     top: 80px;
     left: 100%;
@@ -209,6 +209,11 @@ footer .footer-right .id a {
   color: white;
   text-decoration: none;
 }
+footer .footer-right .id a:hover,
+footer .footer-right .id i:hover,
+footer .footer-right .id p:hover {
+  color: #E4E271;
+}
 @media screen and (max-width: 830px) {
   footer .footer-right .id {
     margin-right: 13px;
@@ -251,4 +256,4 @@ footer .footer-right p {
     grid-template-columns: 1fr;
     text-align: center;
   }
-}
+}/*# sourceMappingURL=main.css.map */

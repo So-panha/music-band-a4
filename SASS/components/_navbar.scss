@@ -1,74 +1,90 @@
 @import "../mixins/breakpoint";
+@import "variables";
+
 nav {
     height: 80px;
     width: 100%;
-    background-color: rgb(51, 77, 77);
+    background-color: $main-color;
     position: fixed;
     top: 0;
     z-index: 1;
+
+    .name-band {
+        font-size: 25px;
+        color: $color-text;
+        position: absolute;
+        left: 11%;
+        top: 25px;
+        font-family: 'Caveat Brush';
+    }
+
+    .return img {
+        border-radius: 50px;
+        position: absolute;
+        top: 14px;
+        left: 5%;
+    }
+
+    ul {
+        margin: 0 0 0 57%;
+
+        li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 15px;
+            justify-content: space-between;
+            padding: 0 20px 0 38px;
+
+            a {
+                position: relative;
+                color: $color-text;
+                font-style: 18px;
+                padding: 5px 0;
+            }
+
+            .hover-home,
+            .hover-music,
+            .hover-contact,
+            .hover-about {
+                color: $color-yellow;
+                border-bottom: 4px solid $color-yellow;
+            }
+
+            a:hover {
+                color: $color-yellow;
+            }
+
+            a:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 100%;
+                background-color: $color-text;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform .4s linear;
+            }
+
+            a:hover:before {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+
+        }
+        @include responsive ('computer'){
+            li{
+                margin-right: -30px;
+            }
+        }
+    }
 }
 
-.nav-left {
-    display: flex;
-
-}
-
-.name-band {
-    font-size: 25px;
-    color: white;
-    position: absolute;
-    left: 11%;
-    top: 25px;
-    font-family: 'Caveat Brush';
-}
-
-nav img {
-    border-radius: 50px;
-    position: absolute;
-    top: 14px;
-    left: 5%;
-}
-
-nav ul {
-    margin: 0 0 0 57%;
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 15px;
-    justify-content: space-between;
-    padding: 0 20px 0 20px;
-}
-
-nav ul li a {
-    position: relative;
-    color: white;
-    font-style: 18px;
-    padding: 5px 0;
-}
-
-nav ul li a:before {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform .4s linear;
-}
-
-nav ul li a:hover:before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
 
 label #btn,
 label #cancel {
-    color: white;
+    color: $color-text;
     font-size: 30px;
     float: right;
     line-height: 80px;
@@ -81,8 +97,8 @@ label #cancel {
     display: none;
 }
 
-@media (max-width: 830px) {
-    nav img {
+@include responsive ('tablet') {
+    nav a img {
         left: 8%;
     }
 
@@ -92,25 +108,6 @@ label #cancel {
 
     p {
         margin-left: 30px;
-    }
-
-    nav ul li {
-        padding: 0 10px 0 10px;
-    }
-}
-
-@media (max-width: 944px) {
-    nav img {
-        left: 6%;
-        top: 15px;
-    }
-
-    .name-band {
-        margin-left: 40px;
-    }
-
-    nav ul li a {
-        font-style: 17px;
     }
 }
 
@@ -126,8 +123,8 @@ label #cancel {
     ul {
         position: fixed;
         width: 100%;
-        height: 80vh;
-        background-color: rgb(51, 77, 77);
+        height: 100vh;
+        background-color: $main-color;
         top: 80px;
         left: 100%;
         text-align: center;
@@ -159,4 +156,5 @@ label #cancel {
     #check:checked~label #cancel {
         display: block;
     }
+
 }

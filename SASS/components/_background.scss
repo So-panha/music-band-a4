@@ -6,4 +6,17 @@ body {
         position: center;
         attachment: fixed;
    }
+   animation: transition 0.75s;
+}
+
+@keyframes transition{
+   from{
+      opacity: 0;
+      transform: rotateX('-10deg');
+   }
+
+   to{
+      opacity: 1;
+      transform: matrix(0);
+   }
 }

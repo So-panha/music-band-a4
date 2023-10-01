@@ -260,7 +260,6 @@ main form {
   display: flex;
   justify-content: center;
   color: white;
-  height: 79.5vh;
   width: 900px;
   margin: 100px auto;
 }
@@ -270,7 +269,7 @@ main form .contact_us_left {
 }
 main form .contact_us_right {
   border-radius: 0 20px 20px 0;
-  background-image: linear-gradient(to bottom, #255b5b, #1f5050, #184545, #123a3a, #0c3030);
+  background-image: linear-gradient(to left top, #083434, #0f2d29, #122720, #132019, #131a13);
 }
 main form .contact_us_right .contact_us_right_text {
   background: #334D4D;
@@ -383,7 +382,7 @@ main form .contact_us_left .contact-us-send {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: teal;
+  background: rgb(51, 77, 77);
   border-radius: 10px;
   margin-right: -46%;
   margin-top: 30px;
@@ -412,7 +411,7 @@ main form .contact_us_left .contact-us-send {
   }
 }
 main form .contact_us_left .contact-us-send:hover {
-  background: #000;
+  background: teal;
   color: white;
   transition: 0.5s;
 }
@@ -420,7 +419,7 @@ main form .contact_us_left .header {
   margin-bottom: 20px;
 }
 main form .contact_us_left .header h1 {
-  background: teal;
+  background: rgb(51, 77, 77);
   display: flex;
   justify-content: center;
   align-items: center;

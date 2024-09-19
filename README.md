@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋</h1>
 <h3 align="center">Welcome to Music Band Project. </h3>
-
+<h4 align="center">We work as a team and reponsible difference roles and also tasks</h4>
 <p align="left">
 </p>
 
